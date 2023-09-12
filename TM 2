@@ -1,0 +1,85 @@
+/* void main() {
+
+    // Initialisation des variables de1, de2, de3
+    int de1 = random(1, 7);
+    int de2 = random(1, 7);
+    int de3 = random(1, 7);
+    // Affichage des variables de1, de2, de3
+    println(de1 + "," + de2 + "," + de3);
+
+    // Triage des valeurs dans les variables de1, de2, de3 dans l'ordre decroissant
+    int temps;
+
+    while (!(de1 >= de2 && de2 >= de3)) {
+        if (de2 < de3) {
+            temps = de2;
+            de2 = de3;
+            de3 = temps;
+        }
+        if (de1 < de2) {
+            temps = de1;
+            de1 = de2;
+            de2 = temps;
+        }
+    }
+
+    if (de1 == 4 && de2 == 2 && de3 == 1) { // Implantation de la condition 421
+        println("421!");
+        print("Vous avez obtenu 11 points!");
+    } else if (de1 == de2 && de2 == de3 && de1 == 1) { // Implantation de la condition Brelan
+        print("Brelan de As, tu gagne 7 points");
+    } else if (de1 == de2 && de2 == de3) {
+        print("Brelan de " + de1 + ", tu gagne " + de1 + " points!");
+    } else if (de2 == 1 && de2 == de3) { // Implantation de la condition Pair d'As
+        print("Pair de As, tu gagne " + de1 + " points!");
+    } else if (de2 == de1 - 1 && de3 == de2 - 1) { // Implantation de la condition Tierce
+        print("Tierce, tu gange 2 points!");
+    } else { // Implantation du reste LoL
+        print("Tu gagne 1 point!");
+    }
+}
+ */
+
+// Exercice 2
+
+/* void main() {
+    int n = readInteger("Chosir un nombre aleatoire");
+    for (int i = 0; i < n + 1; i++) {
+        println(i);
+    }
+}  */
+
+/* void main() {
+    for (int i = 9999; i > 0; i--) {
+        sleep(1);
+        clear();
+        println(i);
+    }
+}
+ */
+/* void main() {
+    for (int i = 2; i < 8889; i++) {
+        if (i % 2 == 0) {
+            println(i);
+        }
+    }
+}
+ */
+
+/* void main() {
+    for (int i = 7777; i > 32; i--) {
+        if (!(i % 2 == 0)) {
+            println(i);
+        }
+    }
+} */
+
+/* // Exercice 3
+
+void main() {
+    int x = readInteger("");
+    for (int i = 0; i < 13; i++) {
+        int calcul = i * x;
+        println(i + " x " + x + " = " + calcul);
+    }
+} */
