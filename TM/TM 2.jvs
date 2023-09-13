@@ -83,3 +83,25 @@ void main() {
         println(i + " x " + x + " = " + calcul);
     }
 } */
+
+// Exercice 4
+
+/* void main() {
+    // Initialisation des variable a_i, a_ii et k
+    int n = readInteger("Choose a number");
+    println("Ton start est " + n);
+    int k = readInteger("Choose a number");
+    println("Nombre d'iteration: " + k);
+    int a_i;
+    int a_ii;
+    a_i = n;
+    for (int i = n; i < k + 1; i++) {
+        if (a_i % 3 == 0) {
+            a_i = a_i / 3;
+        } else {
+            a_i = 2 * a_i + 1;
+        }
+        println("i: " + i);
+        println(a_i);
+    }
+} */
