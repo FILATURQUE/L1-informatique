@@ -212,7 +212,7 @@ b7 = 84 */
     print("Looser ta taper 2 fois le meme chiffre!");
 } */
 
-// Exercice 7 stil working on ...
+// Exercice 7
 
 void main() {
 
