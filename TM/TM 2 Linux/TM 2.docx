@@ -1,0 +1,112 @@
+Question 1:
+c'est la commande pwd qui permet de savoir dans quel repertoire de travail nous nous situons.
+
+Question 2:
+La commande qui permet de cree un dossier est "mkdir"
+
+Question 3:
+La commande qui permet de changer de repertoire est "cd"
+Question 4:
+"touch monFichier1" 
+
+Question 5:
+Open Office pour windows, WORD pour mac.
+
+Question 6:
+"mv monFichier1 monFichier2"
+Question 7:
+"cp monFichier2 monFichier3"
+
+Question 8:
+"mkdir MonDossier2"
+
+Question 9:
+"mv monFichier3 MonDossier2/"
+
+Question 10:
+"ls -l"
+
+Question 11:
+r et w donc qu'on peut lire et ecrire sur le fichier.
+
+Question 12:
+"chmod go-r monFichier2"
+
+Question 13:
+"chmod go+r monFichier2"
+
+Question 14:
+x, r et w donc Le dossier "MonDossier2" est executable, lisable et ecrivable.
+
+Question 15:
+x signifie le fait qu'il soit executable donc qu'on peut voir quel fichier il contient.
+
+Question 16:
+jy@DESKTOP-8MNK1TG:~/MonDossier$ chmod ugo-x MonDossier2/
+jy@DESKTOP-8MNK1TG:~/MonDossier$ ls -l
+total 4
+drw-r--r-- 2 jy jy 4096 Sep 19 15:28 MonDossier2
+-rw-r--r-- 1 jy jy    0 Sep 19 15:23 monFichier2
+jy@DESKTOP-8MNK1TG:~/MonDossier$ cd MonDossier2/
+-bash: cd: MonDossier2/: Permission denied
+
+Question 17:
+jy@DESKTOP-8MNK1TG:~/MonDossier$ chmod ugo+x MonDossier2/
+jy@DESKTOP-8MNK1TG:~/MonDossier$ ls -l
+total 4
+drwxr-xr-x 2 jy jy 4096 Sep 19 15:28 MonDossier2
+-rw-r--r-- 1 jy jy    0 Sep 19 15:23 monFichier2
+jy@DESKTOP-8MNK1TG:~/MonDossier$ cd MonDossier2/
+jy@DESKTOP-8MNK1TG:~/MonDossier/MonDossier2$
+
+Question 18:
+le x pour un fichier signifie qu'on peut ou ne pas l'executer.
+
+Question 19:
+
+Question 20:
+jy@DESKTOP-8MNK1TG:~/MonDossier$ rm monFichier2
+
+Question 21:
+jy@DESKTOP-8MNK1TG:~/MonDossier$ cd MonDossier2/
+jy@DESKTOP-8MNK1TG:~/MonDossier/MonDossier2$ ls
+monFichier3
+jy@DESKTOP-8MNK1TG:~/MonDossier/MonDossier2$ rm monFichier3
+jy@DESKTOP-8MNK1TG:~/MonDossier/MonDossier2$ cd -
+/home/jy/MonDossier
+jy@DESKTOP-8MNK1TG:~/MonDossier$ rmdir MonDossier2/
+jy@DESKTOP-8MNK1TG:~/MonDossier$ ls
+jy@DESKTOP-8MNK1TG:~/MonDossier$
+
+Question 22:
+jy@DESKTOP-8MNK1TG:~/MonDossier$ echo -e '#!/bin/bash\necho Bonjour'>monScript.sh
+jy@DESKTOP-8MNK1TG:~/MonDossier$ ls
+monScript.sh
+
+Question 23:
+jy@DESKTOP-8MNK1TG:~/MonDossier$ cat monScript.sh
+#!/bin/bash
+echo Bonjour
+
+Question 24:
+jy@DESKTOP-8MNK1TG:~/MonDossier$ bash monScript.sh
+Bonjour
+
+Question 25:
+jy@DESKTOP-8MNK1TG:~/MonDossier$ ./monScript.sh
+-bash: ./monScript.sh: Permission denied
+
+Question 26:
+jy@DESKTOP-8MNK1TG:~/MonDossier$ chmod u+x monScript.sh
+jy@DESKTOP-8MNK1TG:~/MonDossier$ ./monScript.sh
+Bonjour
+
+Question 27:
+ls -l --sort=extension
+total 4
+-rwxr--r-- 1 jy jy 25 Sep 19 15:47 monScript.sh
+
+Question 28:
+
+Question 29:
+Question 30:
