@@ -1,0 +1,31 @@
+/*
+void main() {
+    int n = 0;
+    while (n != 6) {
+        n = random(1, 7);
+        println(n);
+    }
+} */
+
+// 2)
+
+/* void main() {
+    int n = 0;
+    int sum = 0;
+    int i = 0;
+    int moy;
+    while (i < 10000) {
+        n = random(1, 7);
+        sum = sum + n;
+        println(n);
+        i++;
+    }
+    moy = sum / 10000;
+    print("MOYENNE = " + moy);
+} */
+
+// Exercice 3
+
+void main() {
+    print("On observe que lors des tous les essaies la moyenne est de 3.");
+}

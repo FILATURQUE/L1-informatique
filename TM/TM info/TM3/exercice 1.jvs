@@ -1,0 +1,48 @@
+/* void main() {
+    int nombre;
+    int i = 0;
+    int resultat = 0;
+    while (!(i >= 10)) {
+        nombre = readInteger("Choisir un nombre");
+        resultat = resultat + nombre;
+        i++;
+    }
+    print("Le resultat est: " + resultat);
+}
+
+ */
+
+// Question 2
+
+/*
+void main() {
+    int nombre;
+    int i = 0;
+    int resultat = 0;
+    int moy;
+    while (!(i >= 10)) {
+        nombre = readInteger("Choisir un nombre");
+        resultat = resultat + nombre;
+        i++;
+    }
+    moy = resultat / 10;
+    print("Le resultat est: " + resultat + " et la moyenne est: " + moy);
+}
+ */
+
+// Question 3
+
+void main() {
+    int nb_nb = readInteger("Le nombre de nombre que tu veux mettre");
+    int nombre;
+    int i = 0;
+    int resultat = 0;
+    int moy;
+    while (!(i >= nb_nb)) {
+        nombre = readInteger("Choisir un nombre");
+        resultat = resultat + nombre;
+        i++;
+    }
+    moy = resultat / nb_nb;
+    print("Le resultat est: " + resultat + " et la moyenne est: " + moy);
+}

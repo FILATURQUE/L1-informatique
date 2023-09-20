@@ -84,8 +84,8 @@ void main() {
 } */
 
 // Exercice 4
-/*
-void main() {
+
+/* void main() {
     // Initialisation des variable a_i, a_ii et k
     int n = readInteger("Choose a number");
     println("Ton start est " + n);
@@ -102,7 +102,7 @@ void main() {
 } */
 
 // Exercice 5
-void main() {
+/* void main() {
     // Initialisation des variables utile pour le programme (k,b0,b1,b2,bn et tm)
     // int k = readInteger("Choisissez une valeur.");
     int b0 = 1;
@@ -123,7 +123,7 @@ void main() {
         }
         i++;
     }
-}
+} */
 
 /* b0 = 1 b1 = 1 b2 =2
 b3 = b0 + b1 + b2 + i
