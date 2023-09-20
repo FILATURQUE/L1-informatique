@@ -1,0 +1,24 @@
+void main() {
+    int y = readInteger("un nb pour y");
+    int t = 20;
+    int ind = 0;
+    while (ind < y) {
+        sleep(t);
+        clear();
+        if (ind == 0) {
+            print("|");
+            for (int i = 0; i < y - 1; i++) {
+                print("-");
+            }
+        } else {
+            for (int i = 0; i < ind; i++) {
+                print("-");
+            }
+            print("|");
+            for (int j = 0; j < y - ind - 1; j++) {
+                print("-");
+            }
+        }
+        ind = ind + 1;
+    }
+}
