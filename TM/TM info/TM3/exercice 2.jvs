@@ -7,25 +7,29 @@ void main() {
     }
 } */
 
+// 3)
+// On observe qu'entre 10000 et 100000 le nb de coup pour avoir un 6 augmente de 10x mais entre
+// 100000 et 1000000 le nb de coup pour avoir 6 diminue drastiquement passant de 8000 en moyenne
+// a 1500 en moyenne
+
 // 2)
 
-/* void main() {
+void main() {
     int n = 0;
     int sum = 0;
     int i = 0;
     int moy;
+    int cpt = 0;
+    int cptx = 0;
     while (i < 10000) {
         n = random(1, 7);
+        if (n == 6) {
+            cpt++;
+            cptx = cptx + i;
+        }
         sum = sum + n;
-        println(n);
         i++;
     }
-    moy = sum / 10000;
+    moy = cptx / 10000;
     print("MOYENNE = " + moy);
-} */
-
-// Exercice 3
-
-void main() {
-    print("On observe que lors des tous les essaies la moyenne est de 3.");
 }

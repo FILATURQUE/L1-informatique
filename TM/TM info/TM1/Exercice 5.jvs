@@ -1,0 +1,18 @@
+void main() {
+    // Initialisation des variables age nom et prenom
+    int age;
+    String nom;
+    String prenom;
+
+    // Demande a l'utilisateur de rentrer age nom et prenom
+    age = readInt(" Quel est votre age ? ");
+    nom = readString("Quel est votre nom ?");
+    prenom = readString("Quel est votre prenom ?");
+
+    // condition qui regarde si l'age de l'utilisateur
+    if (age == 1) {
+        print(prenom + nom + ", " + age + " an");
+    } else {
+        print(prenom + " " + nom + ", " + age + " ans");
+    }
+}

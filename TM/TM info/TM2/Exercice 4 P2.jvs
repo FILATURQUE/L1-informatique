@@ -1,0 +1,18 @@
+void main() {
+    // Initialisation des variable a_i
+    int n = readInteger("Choose a number");
+    int a_i = n;
+    int a_ii = a_i;
+
+    while (a_ii != 1) {
+        if (a_ii % 3 == 0) {
+            a_i = a_ii;
+            a_ii = a_i / 3;
+            println(a_ii);
+        } else {
+            a_i = a_ii;
+            a_ii = 2 * a_i + 1;
+            println(a_ii);
+        }
+    }
+}

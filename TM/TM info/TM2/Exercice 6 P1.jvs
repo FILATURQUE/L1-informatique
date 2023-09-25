@@ -1,0 +1,16 @@
+void main() {
+    int nb = 1;
+    int nb_b = 0;
+    int win = 0;
+    while (!(win == 1000)) {
+        nb = readInteger("Ecrit un nombre");
+        print(nb);
+        if (nb == nb_b) {
+            win = 1000;
+        } else {
+            nb_b = nb;
+        }
+    }
+    println("");
+    print("Eheheheh gros loser ta ecrit 2 fois de suite le meme chiffre");
+}

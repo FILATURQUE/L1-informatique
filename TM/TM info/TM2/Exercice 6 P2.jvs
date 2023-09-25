@@ -1,0 +1,54 @@
+void main() {
+    int nb = 1;
+    int essaie = 0;
+    int nb_1 = 999;
+    int nb_2 = 999;
+    int nb_3 = 999;
+    int nb_4 = 999;
+    int nb_5 = 999;
+    int nb_6 = 999;
+    int nb_7 = 999;
+    int nb_8 = 999;
+    int nb_9 = 999;
+    int nb_10 = 999;
+    int win = 0;
+    while (!(win == 1000)) {
+        nb = readInteger("Ecrit un nombre entre 0 et 9");
+        print(nb);
+        essaie++;
+        if (nb == nb_1
+                || nb == nb_2
+                || nb == nb_3
+                || nb == nb_4
+                || nb == nb_5
+                || nb == nb_6
+                || nb == nb_7
+                || nb == nb_8
+                || nb == nb_9
+                || nb == nb_10) {
+            win = 1000;
+        } else if (essaie == 0) {
+            nb_1 = nb;
+        } else if (essaie == 1) {
+            nb_2 = nb;
+        } else if (essaie == 2) {
+            nb_3 = nb;
+        } else if (essaie == 3) {
+            nb_4 = nb;
+        } else if (essaie == 4) {
+            nb_5 = nb;
+        } else if (essaie == 5) {
+            nb_6 = nb;
+        } else if (essaie == 6) {
+            nb_7 = nb;
+        } else if (essaie == 7) {
+            nb_8 = nb;
+        } else if (essaie == 8) {
+            nb_9 = nb;
+        } else {
+            nb_10 = nb;
+        }
+    }
+    println("");
+    print("Looser ta taper 2 fois le meme chiffre!");
+}

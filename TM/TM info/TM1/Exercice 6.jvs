@@ -1,39 +1,4 @@
-/* void main() {
-    int n = random(1, 4);
-
-    print(" ( ");
-
-    if (n == 1) {
-
-        print(" o ");
-
-    } else {
-        if (n == 2) {
-
-            print("*");
-
-        } else {
-            print("-");
-        }
-    }
-    print(" _ ");
-
-    n = random(1, 4);
-
-    if (n == 1) {
-        print(" o ");
-    } else {
-        if (n == 2) {
-            print("*");
-        } else {
-            print("-");
-        }
-    }
-    println(" ) ");
-}
- */
-
-/* void main() {
+void main() {
 
     int a = readInt(" 1: Pierre 2: Papier 3: Ciseaux 4: Puit ");
 
@@ -62,4 +27,4 @@
     } else {
         println("Joueur 2 gagne");
     }
-}*/
+}

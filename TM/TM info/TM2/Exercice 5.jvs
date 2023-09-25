@@ -1,0 +1,23 @@
+void main() {
+    // Initialisation des variables utile pour le programme (k,b0,b1,b2,bn et tmp)
+    // int k = readInteger("Choisissez une valeur.");
+    int b0 = 1;
+    int b1 = 1;
+    int b2 = 1;
+    int bn = 0;
+    int tmp;
+    int i = 0;
+    // while (bn < k) {} -> question 1
+    while (bn < 50000) {
+        if (i < 3) {
+            println("1");
+        } else {
+            bn = b0 + b1 + b2 + i;
+            b0 = b1;
+            b1 = b2;
+            b2 = bn;
+            println(bn);
+        }
+        i++;
+    }
+}
