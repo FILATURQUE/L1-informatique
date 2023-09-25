@@ -1,0 +1,47 @@
+void main() {
+    int y = readInteger("un nb pour y");
+    int tour = readInteger("un nb de tour");
+    int t = 20;
+    for (int td = 0; td < tour; td++) {
+        int ind = 0;
+        int indx = 0;
+        while (ind < y) {
+            sleep(t);
+            clear();
+            if (ind == 0) {
+                print("|");
+                for (int i = 0; i < y - 1; i++) {
+                    print("-");
+                }
+            } else {
+                for (int i = 0; i < ind; i++) {
+                    print("-");
+                }
+                print("|");
+                for (int j = 0; j < y - ind - 1; j++) {
+                    print("-");
+                }
+            }
+            ind = ind + 1;
+        }
+        while (indx < y) {
+            sleep(t);
+            clear();
+            if (indx == 0) {
+                for (int i = 0; i < y - 1; i++) {
+                    print("-");
+                }
+                print("|");
+            } else {
+                for (int j = 0; j < y - indx - 1; j++) {
+                    print("-");
+                }
+                print("|");
+                for (int i = 0; i < indx; i++) {
+                    print("-");
+                }
+            }
+            indx++;
+        }
+    }
+}
