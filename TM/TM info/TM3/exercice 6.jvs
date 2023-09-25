@@ -1,0 +1,186 @@
+void main() {
+    // Initialisation de toute les variabless necessaires au morpion
+    int player = -1;
+    int coup = 0;
+    int coup_last = 123;
+    int coup_jouer = 0;
+    int case1 = 2234;
+    int case2 = 3234;
+    int case3 = 423;
+    int case4 = 5234;
+    int case5 = 6523;
+    int case6 = 7234;
+    int case7 = 8523;
+    int case8 = 9234;
+    int case9 = 2340;
+    String case1_affichage = "|_|";
+    String case2_affichage = "|_|";
+    String case3_affichage = "|_|";
+    String case4_affichage = "|_|";
+    String case5_affichage = "|_|";
+    String case6_affichage = "|_|";
+    String case7_affichage = "|_|";
+    String case8_affichage = "|_|";
+    String case9_affichage = "|_|";
+
+    while (!(case1 == case2 && case2 == case3
+            || case1 == case4 && case4 == case7
+            || case1 == case5 && case5 == case9
+            || case3 == case5 && case5 == case7
+            || case3 == case6 && case6 == case9
+            || case7 == case8 && case8 == case9
+            || case2 == case5 && case5 == case8
+            || case4 == case5 && case5 == case6
+            || coup_jouer == 9)) {
+        println(player);
+        coup = readInteger("Quel coups souhaite tu jouer ? (1 a 9)");
+        if (coup == 1 && case1 != 1 && coup == 1 && case1 != 2) {
+            clear();
+            if (player % 2 == 0) {
+                case1_affichage = "|x|";
+                coup_last = coup;
+                case1 = 1;
+            } else {
+                case1 = 2;
+                case1_affichage = "|o|";
+                coup_last = coup;
+            }
+            player++;
+            println(case1_affichage + case2_affichage + case3_affichage);
+            println(case4_affichage + case5_affichage + case6_affichage);
+            println(case7_affichage + case8_affichage + case9_affichage);
+        } else if (coup == 2 && case2 != 1 && case2 != 2 && coup == 2) {
+            clear();
+            if (player % 2 == 0) {
+                case2_affichage = "|x|";
+                coup_last = coup;
+                case2 = 1;
+            } else {
+                case2 = 2;
+                case2_affichage = "|o|";
+                coup_last = coup;
+            }
+            player++;
+            println(case1_affichage + case2_affichage + case3_affichage);
+            println(case4_affichage + case5_affichage + case6_affichage);
+            println(case7_affichage + case8_affichage + case9_affichage);
+        } else if (coup == 3 && case3 != 1 && case3 != 2 && coup == 3) {
+            clear();
+            if (player % 2 == 0) {
+                case3 = 1;
+                case3_affichage = "|x|";
+                coup_last = coup;
+            } else {
+                case3 = 2;
+                case3_affichage = "|o|";
+                coup_last = coup;
+            }
+            player++;
+            println(case1_affichage + case2_affichage + case3_affichage);
+            println(case4_affichage + case5_affichage + case6_affichage);
+            println(case7_affichage + case8_affichage + case9_affichage);
+        } else if (coup == 4 && case4 != 1 && case4 != 2 && coup == 4) {
+            clear();
+            if (player % 2 == 0) {
+                case4 = 1;
+                case4_affichage = "|x|";
+                coup_last = coup;
+            } else {
+                case4 = 2;
+                case4_affichage = "|o|";
+                coup_last = coup;
+            }
+            player++;
+            println(case1_affichage + case2_affichage + case3_affichage);
+            println(case4_affichage + case5_affichage + case6_affichage);
+            println(case7_affichage + case8_affichage + case9_affichage);
+        } else if (coup == 5 && case5 != 1 && case5 != 2 && coup == 5) {
+            clear();
+            if (player % 2 == 0) {
+                case5 = 1;
+                case5_affichage = "|x|";
+                coup_last = coup;
+            } else {
+                case5 = 2;
+                case5_affichage = "|o|";
+                coup_last = coup;
+            }
+            player++;
+            println(case1_affichage + case2_affichage + case3_affichage);
+            println(case4_affichage + case5_affichage + case6_affichage);
+            println(case7_affichage + case8_affichage + case9_affichage);
+        } else if (coup == 6 && case6 != 1 && case6 != 2 && coup == 6) {
+            clear();
+            if (player % 2 == 0) {
+                case6 = 1;
+                case6_affichage = "|x|";
+                coup_last = coup;
+            } else {
+                case6 = 2;
+                case6_affichage = "|o|";
+                coup_last = coup;
+            }
+            player++;
+            println(case1_affichage + case2_affichage + case3_affichage);
+            println(case4_affichage + case5_affichage + case6_affichage);
+            println(case7_affichage + case8_affichage + case9_affichage);
+        } else if (coup == 7 && case7 != 1 && case7 != 2 && coup == 7) {
+            clear();
+            if (player % 2 == 0) {
+                case7 = 1;
+                case7_affichage = "|x|";
+                coup_last = coup;
+            } else {
+                case7 = 2;
+                case7_affichage = "|o|";
+                coup_last = coup;
+            }
+            player++;
+            println(case1_affichage + case2_affichage + case3_affichage);
+            println(case4_affichage + case5_affichage + case6_affichage);
+            println(case7_affichage + case8_affichage + case9_affichage);
+        } else if (coup == 8 && case8 != 1 && case8 != 2 && coup == 8) {
+            clear();
+            if (player % 2 == 0) {
+                case8 = 1;
+                case8_affichage = "|x|";
+                coup_last = coup;
+            } else {
+                case8 = 2;
+                case8_affichage = "|o|";
+                coup_last = coup;
+            }
+            player++;
+            println(case1_affichage + case2_affichage + case3_affichage);
+            println(case4_affichage + case5_affichage + case6_affichage);
+            println(case7_affichage + case8_affichage + case9_affichage);
+        } else if (coup == 9 && case9 != 1 && case9 != 2 && coup == 9) {
+            clear();
+            if (player % 2 == 0) {
+                case9 = 1;
+                case9_affichage = "|x|";
+                coup_last = coup;
+            } else {
+                case9 = 2;
+                case9_affichage = "|o|";
+                coup_last = coup;
+            }
+            player++;
+            println(case1_affichage + case2_affichage + case3_affichage);
+            println(case4_affichage + case5_affichage + case6_affichage);
+            println(case7_affichage + case8_affichage + case9_affichage);
+        } else {
+            while (coup == coup_last) {
+                coup = readInteger("Coup impossible car deja jouer, ressaye");
+            }
+        }
+        coup_jouer++;
+    }
+    if (coup_jouer == 9) {
+        print("TIE");
+    } else if (player % 2 == 0) {
+        print("Player 1 WIN !!!");
+    } else {
+        print("Player 2 WIN !!!");
+    }
+}
