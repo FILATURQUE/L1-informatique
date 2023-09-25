@@ -32,7 +32,6 @@ void main() {
             || case2 == case5 && case5 == case8
             || case4 == case5 && case5 == case6
             || coup_jouer == 9)) {
-        println(player);
         coup = readInteger("Quel coups souhaite tu jouer ? (1 a 9)");
         if (coup == 1 && case1 != 1 && coup == 1 && case1 != 2) {
             clear();
