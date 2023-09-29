@@ -1,0 +1,24 @@
+void main() {
+    int[] tab;
+    tab = new int[100];
+    int index = 0;
+    int j = 0;
+    int nombre;
+    while (!(index == 3)) {
+        while (j < tab.length) {
+            tab[j] = readInteger("Nombre entre 1 et 99: ");
+            nombre = 0;
+            for (int i = 0; i < tab.length; i++) {
+                if (tab[j] == tab[i]) {
+                    nombre++;
+                }
+            }
+            if (nombre >= 3) {
+                print("tu as ecrit le meme chiffre 3 fois");
+                index = 3;
+                j = 100;
+            }
+            j++;
+        }
+    }
+}

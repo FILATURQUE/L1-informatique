@@ -1,0 +1,5 @@
+void main() {
+    String[] tab;
+    tab = new String[] {"cool", "sympa", "raciste", "degeulasse", "weeb"};
+    print(tab[random(1, tab.length)]);
+}
