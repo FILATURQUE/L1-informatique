@@ -16,7 +16,7 @@ void main() {
             if (nombre >= 3) {
                 print("tu as ecrit le meme chiffre 3 fois");
                 index = 3;
-                j = 100;
+                j = tab.length;
             }
             j++;
         }
