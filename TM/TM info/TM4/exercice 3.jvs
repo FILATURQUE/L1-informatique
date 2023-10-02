@@ -1,81 +1,27 @@
 void main() {
     int[] tab;
     tab = new int[20];
-    int i = 0;
-    int tab_tmp = 0;
-    int compteur = 0;
-    boolean victoire = false;
-    int tab_tmp2 = 0;
-    while (victoire != true) {
-        tab[0] = readInteger("Choissez un nombre entre 0 et 19");
-        clear();
-        if (i == 19) {
-            i = 0;
-            compteur = 0;
-            for (int ij = 0; ij < tab.length; ij++) {
-                print(tab[ij] + ", ");
-            }
-            println("");
-        } else if (i == 0) {
-            if (i > 0) {
-                int a = 0;
-                while (a != 3) {
-                    tab[0] = 0;
-                    a++;
+    int nombre;
+    int e = 0;
+    int x = 0;
+    while (e == 0) {
+        x = 0;
+        nombre = readInteger("donner votre nombre ");
+        if (tab[nombre] == 0) {
+            tab[nombre] += 1;
+            clear();
+        }
+        for (int i = 0; i < tab.length; i++) {
+            print(tab[i]);
+            print(",");
+            if (tab[i] == 1) {
+                x++;
+                if (x == 20) {
+                    print("gagner");
+                    e = 1;
                 }
             }
-            tab[tab.length - 1] = tab[0];
-            tab[0] = 0;
-            for (int ij = 0; ij < tab.length; ij++) {
-                print(tab[ij] + ", ");
-            }
-            println("");
-
-        } else {
-            for (int ii = 1; ii < tab.length; ii++) {
-                if (tab[ii - 1] > tab[ii]) {
-                    tab_tmp = tab[ii - 1];
-                    tab[ii - 1] = tab[ii];
-                    tab[ii] = tab_tmp;
-                    tab_tmp2 = tab[ii - 1];
-                }
-            }
-            for (int ij = 0; ij < tab.length; ij++) {
-                print(tab[ij] + ", ");
-            }
-            println("");
-
-            println("Changement entre: " + tab_tmp + " et " + tab_tmp2);
-        }
-        for (int ix = 0; ix < tab.length - 1; ix++) {
-            if (tab[ix] == tab[ix + 1]) {
-                tab[ix] = 0;
-            }
-        }
-        i++;
-        compteur++;
-        if (tab[1] == 1
-                && tab[2] == 2
-                && tab[3] == 3
-                && tab[4] == 4
-                && tab[5] == 5
-                && tab[6] == 6
-                && tab[7] == 7
-                && tab[8] == 8
-                && tab[9] == 9
-                && tab[10] == 10
-                && tab[11] == 11
-                && tab[12] == 12
-                && tab[13] == 13
-                && tab[14] == 14
-                && tab[15] == 15
-                && tab[16] == 16
-                && tab[17] == 17
-                && tab[18] == 18
-                && tab[19] == 19) {
-            victoire = true;
         }
     }
     clear();
-    println("Tu as ecrit tt les chiffres de 0 a 19 au moins 1 fois");
 }
