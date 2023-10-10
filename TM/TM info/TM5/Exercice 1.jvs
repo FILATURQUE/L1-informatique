@@ -1,3 +1,4 @@
+// Code by zakaria
 void main() {
     int t = readInteger("Entrez combien de nombres vous allez entrer");
     int[] tab = new int[t];
@@ -15,5 +16,3 @@ void main() {
         print(tab2[i] + " ");
     }
 }
-
-// Code by Zakaria..
