@@ -1,0 +1,8 @@
+void main() {
+    int n = readInteger("choisir la taille du tableau 2d");
+    boolean[] tab = new boolean[n][n];
+    int x = readInteger("coordonne x");
+    int y = readInteger("coordonne y");
+    print(tab[x][y] + tab[x][y + 1]);
+    print(tab[x + 1][y] + tab[x + 1][y + 1]);
+}
