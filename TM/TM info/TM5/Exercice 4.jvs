@@ -6,10 +6,30 @@ void main() {
             tab[i][j] = " ";
         }
     }
-    int ind = 0;
-    int half = tab.length / 2;
+    int half = n / 2;
     for (int i = 0; i < tab.length; i++) {
         tab[half][i] = "X";
+    }
+    int patate = 1;
+    int fin = tab.length - 1;
+    while (half != 0) {
+        half--;
+        for (int debut = patate; debut < fin; debut++) {
+            tab[half][debut] = "X";
+        }
+        patate++;
+        fin--;
+    }
+    half = n / 2;
+    patate = 1;
+    fin = tab.length - 1;
+    while (half != n) {
+        half++;
+        for (int debut = patate; debut < fin; debut++) {
+            tab[half][debut] = "X";
+        }
+        patate++;
+        fin--;
     }
     for (int i = 0; i < n; i++) {
         for (int j = 0; j < n; j++) {
