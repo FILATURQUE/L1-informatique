@@ -1,0 +1,27 @@
+int matiere = readInteger("Le nombre de matieres");
+int students = readInteger("Le nombre d'eleve");
+String[][] note = new String[students + 1][matiere + 1];
+
+void main() {
+    for (int i = 0; i < students + 1; i++) {
+        int nb_matiere = 0;
+        for (int j = 0; j < matiere + 1; j++) {
+            if (i == 0 && j == 0) {
+                note[i][j] = "ID Eleves";
+            } else if (i == 0) {
+                note[i][j] = String.valueOf(nb_matiere);
+            } else if (j == 0) {
+                note[i][j] = readString("ID ELEVE");
+            } else {
+                note[i][j] = readString("Note de l'eleve " + note[i][0] + " en " + note[0][j]);
+            }
+            print("|" + note[i][j]);
+            nb_matiere++;
+        }
+        println("");
+        for (int ij = 0; ij < matiere + 1; ij++) {
+            print("---");
+        }
+        println("");
+    }
+}
