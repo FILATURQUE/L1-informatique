@@ -1,8 +1,23 @@
 void main() {
-    int n = readInteger("choisir la taille du tableau 2d");
-    boolean[] tab = new boolean[n][n];
-    int x = readInteger("coordonne x");
-    int y = readInteger("coordonne y");
-    print(tab[x][y] + tab[x][y + 1]);
-    print(tab[x + 1][y] + tab[x + 1][y + 1]);
+    int size = readInteger("The size of the table");
+    boolean[][] bat = new boolean[size][size];
+
+    int x = readInteger("La coordonnee X");
+    int y = readInteger("La coordonnee Y");
+
+    bat[x][y] = true;
+    bat[x][y + 1] = true;
+    bat[x + 1][y] = true;
+    bat[x + 1][y + 1] = true;
+
+    for (int i = 0; i < bat.length; i++) {
+        for (int j = 0; j < bat.length; j++) {
+            if (bat[i][j] == false) {
+                print(" X ");
+            } else if (bat[i][j] == true) {
+                print(" O ");
+            }
+        }
+        println("");
+    }
 }
