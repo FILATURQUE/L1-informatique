@@ -1,0 +1,29 @@
+class Personne {
+    String nom, prenom;
+    int age;
+    double taille;
+}
+
+void main() {
+    Personne p1 = new Personne();
+    p1.nom = "Dupont";
+    p1.prenom = "Pascal";
+    p1.age = 30;
+    p1.taille = 1.70;
+    afficherPersonne(p1);
+    Personne p2 = new Personne();
+    p2 = saisirFichePerso(p2);
+    afficherPersonne(p2);
+}
+
+Personne saisirFichePerso(Personne p1) {
+    p1.nom = readString("Ton nom");
+    p1.prenom = readString("Ton prenom");
+    p1.age = readInt("Ton age");
+    p1.taille = readDouble("Ta taille");
+    return p1;
+}
+
+void afficherPersonne(Personne p1) {
+    print(p1.nom + " " + p1.prenom + " a " + p1.age + " ans et fait " + p1.taille);
+}
