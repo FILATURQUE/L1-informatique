@@ -1,0 +1,185 @@
+class Individu {
+    String nom, prenom;
+    Individu pere, mere;
+}
+
+void main() {
+    Individu[] familleSimpson = creerFamilleSimpson();
+    afficheTab(grandParents(familleSimpson[5]));
+}
+
+Individu[] creerFamilleSimpson() {
+
+    Individu abraham = new Individu();
+    abraham.nom = "Simpson";
+    abraham.prenom = "Abraham";
+    abraham.pere = null;
+    abraham.mere = null;
+
+    Individu mona = new Individu();
+    mona.nom = "Olsen";
+    mona.prenom = "Mona";
+    mona.pere = null;
+    mona.mere = null;
+
+    Individu jacqueline = new Individu();
+    jacqueline.nom = "Bouvier";
+    jacqueline.prenom = "Jacqueline";
+    jacqueline.pere = null;
+    jacqueline.mere = null;
+
+    Individu clancy = new Individu();
+    clancy.nom = "Bouvier";
+    clancy.prenom = "Clancy";
+    clancy.pere = null;
+    clancy.mere = null;
+
+    Individu herbert = new Individu();
+    herbert.nom = "Powell";
+    herbert.prenom = "Herbert";
+    herbert.pere = abraham;
+    herbert.mere = mona;
+
+    Individu homer = new Individu();
+    homer.nom = "Simpson";
+    homer.prenom = "Homer";
+    homer.pere = abraham;
+    homer.mere = mona;
+
+    Individu marge = new Individu();
+    marge.nom = "Simpson";
+    marge.prenom = "Marge";
+    marge.pere = clancy;
+    marge.mere = jacqueline;
+
+    Individu patty = new Individu();
+    patty.nom = "Bouvier";
+    patty.prenom = "Patty";
+    patty.pere = clancy;
+    patty.mere = jacqueline;
+
+    Individu selma = new Individu();
+    selma.nom = "Bouvier";
+    selma.prenom = "Selma";
+    selma.pere = clancy;
+    selma.mere = jacqueline;
+
+    Individu bart = new Individu();
+    bart.nom = "Simpson";
+    bart.prenom = "Bart";
+    bart.pere = homer;
+    bart.mere = marge;
+
+    Individu lisa = new Individu();
+    lisa.nom = "Simpson";
+    lisa.prenom = "Lisa";
+    lisa.pere = homer;
+    lisa.mere = marge;
+
+    Individu maggie = new Individu();
+    maggie.nom = "Simpson";
+    maggie.prenom = "Maggie";
+    maggie.pere = homer;
+    maggie.mere = marge;
+
+    Individu ling = new Individu();
+    ling.nom = "Bouvier";
+    ling.prenom = "Ling";
+    ling.pere = null;
+    ling.mere = selma;
+
+    Individu[] tab =
+            new Individu[] {
+                abraham,
+                mona,
+                jacqueline,
+                clancy,
+                herbert,
+                homer,
+                marge,
+                patty,
+                selma,
+                bart,
+                lisa,
+                maggie,
+                ling
+            };
+
+    return tab;
+}
+
+void afficherIndividu(Individu p) {
+    if (p.pere != null) {
+        if (p.mere != null) {
+
+            println(
+                    p.prenom
+                            + " "
+                            + p.nom
+                            + " "
+                            + p.pere.prenom
+                            + " "
+                            + p.pere.nom
+                            + " "
+                            + p.mere.prenom
+                            + " "
+                            + p.mere.nom);
+        }
+    }
+}
+
+void afficherFamille(Individu[] tab) {
+    for (int i = 0; i < tab.length; i++) {
+        afficherIndividu(tab[i]);
+    }
+}
+
+Individu rechercherMembre(Individu[] tab, String prenom, String nom) {
+    Individu InTab = null;
+    for (int i = 0; i < tab.length; i++) {
+        if (equal(tab[i].prenom, prenom) && equal(tab[i].nom, nom)) {
+            InTab = tab[i];
+        }
+    }
+    return InTab;
+}
+
+// Exercice 2
+
+Individu[] parents(Individu p) {
+    Individu[] tab = new Individu[2];
+    if (p.pere != null) {
+        tab[0] = p.pere;
+    }
+    if (p.mere != null) {
+        tab[1] = p.mere;
+    }
+    return tab;
+}
+
+void afficheTab(Individu[] tab) {
+    for (int i = 0; i < tab.length; i++) {
+        println("Prenom: " + tab[i].prenom + " Nom: " + tab[i].nom);
+    }
+}
+
+Individu[] grandParents(Individu p) {
+    Individu[] tab = new Individu[4];
+    if (p.pere != null) {
+        if (p.pere.pere != null) {
+            tab[0] = p.pere.pere;
+        }
+        if (p.pere.mere != null) {
+            tab[1] = p.pere.mere;
+        }
+    }
+    if (p.mere != null) {
+        if (p.mere.mere != null) {
+            tab[2] = p.mere.pere;
+        }
+        if (p.mere.mere != null) {
+            tab[3] = p.mere.mere;
+        }
+    }
+    return tab;
+}
